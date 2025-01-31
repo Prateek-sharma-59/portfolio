@@ -24,42 +24,42 @@ import { SiMui } from "react-icons/si";
 
 const Experience = () => {
   return (
-    <div className="md:min-h-screen bg-[#1a1f35] flex justify-center items-center">
-      <div className=" bg-white rounded-lg px-8 py-16 w-3/4">
-          <h1 className=" text-5xl font-bold font-serif text-[#445589] text-center">
-            Skills
-          </h1>
-          <h1 className="text-2xl font-serif text-center text-[#445589] mt-4">
-            The skills, tools and technologies I use:
-          </h1>
-          <div>
-            <div className="flex gap-20 mt-14">
-              <FaReact fontSize={60} className="text-blue-400" />
-              <IoLogoJavascript fontSize={60} className="text-yellow-300" />
-              <FaHtml5 fontSize={60} className="text-orange-400" />
-              <SiCss3 fontSize={60} className="text-blue-500" />
-              <RiNextjsFill fontSize={60} />
-              <SiTypescript fontSize={60} className="text-blue-500" />
-              <FaNode fontSize={60} className="text-green-700" />
-              <SiMongodb fontSize={60} className="text-lime-600" />
-            </div>
-            <div className="flex gap-20 justify-center mt-14">
-              <GrMysql fontSize={60} className="text-blue-500" />
-              <FaAws fontSize={60} className="text-orange-400" />
-              <FaGitAlt fontSize={60} className="text-orange-500" />
-              <FaGithubSquare fontSize={60} />
-              <RiTailwindCssFill fontSize={60} className="text-blue-500" />
-              <FaBootstrap fontSize={60} className="text-purple-600" />
-            </div>
-            <div className="flex gap-20 justify-center mt-14">
-              <SiMui fontSize={60} className="text-blue-500" />
-              <IoLogoFirebase fontSize={60} className="text-orange-400" />
-              <SiNestjs fontSize={60} className="text-red-700" />
-              <SiStrapi fontSize={60} className="text-purple-600" />
-            </div>
+    <div className="md:min-h-screen bg-[#1a1f35] flex justify-center items-center md:p-0 p-8">
+      <div className=" bg-white rounded-lg px-4 py-4 md:px-8 md:py-16 md:w-3/4">
+        <h1 className=" text-5xl font-bold font-serif text-[#445589] text-center">
+          Skills
+        </h1>
+        <h1 className="text-2xl font-serif text-center text-[#445589] mt-4">
+          The skills, tools and technologies I use:
+        </h1>
+        <div>
+          <div className="flex gap-4 md:gap-20 mt-14">
+            <FaReact fontSize={60} className="text-blue-400" />
+            <IoLogoJavascript fontSize={60} className="text-yellow-300" />
+            <FaHtml5 fontSize={60} className="text-orange-400" />
+            <SiCss3 fontSize={60} className="text-blue-500" />
+            <RiNextjsFill fontSize={60} />
+            <SiTypescript fontSize={60} className="text-blue-500" />
+            <FaNode fontSize={60} className="text-green-700" />
+            <SiMongodb fontSize={60} className="text-lime-600" />
+          </div>
+          <div className="flex gap-20 justify-center mt-14">
+            <GrMysql fontSize={60} className="text-blue-500" />
+            <FaAws fontSize={60} className="text-orange-400" />
+            <FaGitAlt fontSize={60} className="text-orange-500" />
+            <FaGithubSquare fontSize={60} />
+            <RiTailwindCssFill fontSize={60} className="text-blue-500" />
+            <FaBootstrap fontSize={60} className="text-purple-600" />
+          </div>
+          <div className="flex gap-20 justify-center mt-14">
+            <SiMui fontSize={60} className="text-blue-500" />
+            <IoLogoFirebase fontSize={60} className="text-orange-400" />
+            <SiNestjs fontSize={60} className="text-red-700" />
+            <SiStrapi fontSize={60} className="text-purple-600" />
           </div>
         </div>
       </div>
+    </div>
   );
 };
 

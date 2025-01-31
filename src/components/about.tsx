@@ -4,8 +4,8 @@ import about from "../../public/about.png";
 
 const About = () => {
   return (
-    <div className="md:min-h-screen bg-[#1a1f35] flex justify-center items-center">
-      <div className=" bg-[#0d101c] rounded-lg px-16 py-8 w-3/4">
+    <div className="md:min-h-screen bg-[#1a1f35] flex justify-center items-center md:p-0 p-8">
+      <div className=" bg-[#0d101c] rounded-lg px-4 py-4 md:px-16 md:py-8 md:w-3/4">
         <div className="grid grid-cols-1 md:grid-cols-2">
           <Image
             className="mt-6"
@@ -16,11 +16,11 @@ const About = () => {
           />
           <div className="flex justify-center items-center">
             <div>
-              <h1 className="text-white text-5xl font-bold font-serif">
+              <h1 className="text-white text-4xl md:text-5xl font-bold font-serif mt-2 md:mt-0">
                 About
               </h1>
 
-              <p className="text-white text-xl leading-relaxed text-justify mt-4">
+              <p className="text-white text-sm md:text-xl leading-relaxed md:text-justify mt-4">
                 Results-driven Software Developer with a specialization in MERN
                 stack applications, combining strong analytical skills with a
                 meticulous attention to detail. Proven ability to facilitate

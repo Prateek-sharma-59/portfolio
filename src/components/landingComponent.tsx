@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import { CiMenuBurger } from "react-icons/ci";
 import Lottie from "react-lottie";
 import Navigation from "./navigation";
+import Drawer from "./navigation";
 
 const LandingComponent = () => {
   const [open, setOpen] = useState(false);
@@ -26,11 +27,12 @@ const LandingComponent = () => {
           <h1>Contact</h1>
         </div>
         <div className="h-full flex justify-end items-center lg:hidden">
-          <div className="w-8 h-8 rounded-full border text-white flex items-center justify-center">
-            <CiMenuBurger fontSize={18} onClick={() => setOpen(true)} />
-          </div>
+          {/* <div className="w-8 h-8 rounded-full border text-white flex items-center justify-center"> */}
+            {/* <CiMenuBurger fontSize={18} onClick={() => setOpen(true)} /> */}
+            <Drawer/>
+          {/* </div> */}
         </div>
-        {open && <Navigation setOpen={setOpen} />}
+        {/* {open && <Navigation setOpen={setOpen} />} */}
 
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 px-8 py-4">
