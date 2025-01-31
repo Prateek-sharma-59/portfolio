@@ -4,7 +4,7 @@ import about from "../../public/about.png";
 
 const About = () => {
   return (
-    <div className="md:min-h-screen bg-[#1a1f35] flex justify-center items-center md:p-0 p-8">
+    <div id="About" className="md:min-h-screen bg-[#1a1f35] flex justify-center items-center md:p-0 p-8">
       <div className=" bg-[#0d101c] rounded-lg px-4 py-4 md:px-16 md:py-8 md:w-3/4">
         <div className="grid grid-cols-1 md:grid-cols-2">
           <Image

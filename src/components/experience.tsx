@@ -24,7 +24,7 @@ import { SiMui } from "react-icons/si";
 
 const Experience = () => {
   return (
-    <div className="md:min-h-screen bg-[#1a1f35] flex justify-center items-center md:p-0 p-8">
+    <div id="Skills" className="md:min-h-screen bg-[#1a1f35] flex justify-center items-center md:p-0 p-8">
       <div className=" bg-white rounded-lg px-4 py-4 md:px-8 md:py-16 md:w-3/4">
         <h1 className=" text-5xl font-bold font-serif text-[#445589] text-center">
           Skills

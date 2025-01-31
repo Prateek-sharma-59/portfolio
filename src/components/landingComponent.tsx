@@ -4,6 +4,7 @@ import { CiMenuBurger } from "react-icons/ci";
 import Lottie from "react-lottie";
 import Navigation from "./navigation";
 import Drawer from "./navigation";
+import { Link } from "react-scroll";
 
 const LandingComponent = () => {
   const [open, setOpen] = useState(false);
@@ -21,19 +22,22 @@ const LandingComponent = () => {
       <div className="grid grid-cols-2 px-8 py-4">
         <h1 className="text-white text-2xl font-bold">Portfolio</h1>
         <div className="text-white lg:flex hidden justify-around items-center font-bold">
-          <h1>About</h1>
-          <h1>Skills</h1>
+          <Link className="cursor-pointer" to="About" smooth={true} duration={500}>
+            About
+          </Link>
+          <Link className="cursor-pointer" to="Skills" smooth={true} duration={500}>
+          Skills
+          </Link>
           <h1>Projects</h1>
           <h1>Contact</h1>
         </div>
         <div className="h-full flex justify-end items-center lg:hidden">
           {/* <div className="w-8 h-8 rounded-full border text-white flex items-center justify-center"> */}
-            {/* <CiMenuBurger fontSize={18} onClick={() => setOpen(true)} /> */}
-            <Drawer/>
+          {/* <CiMenuBurger fontSize={18} onClick={() => setOpen(true)} /> */}
+          <Drawer />
           {/* </div> */}
         </div>
         {/* {open && <Navigation setOpen={setOpen} />} */}
-
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 px-8 py-4">
         <div className="text-white flex justify-center items-center">
@@ -62,7 +66,6 @@ const LandingComponent = () => {
           />
         </div>
       </div>
-
     </div>
   );
 };
