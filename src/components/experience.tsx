@@ -1,6 +1,4 @@
 import React from "react";
-import Image from "next/image";
-import about from "../../public/about.png";
 import { FaReact } from "react-icons/fa";
 import { IoLogoJavascript } from "react-icons/io5";
 import { FaHtml5 } from "react-icons/fa";
@@ -28,10 +26,10 @@ const Experience = () => {
   return (
     <div className="md:min-h-screen bg-[#1a1f35] flex justify-center items-center">
       <div className=" bg-white rounded-lg px-8 py-16 w-3/4">
-          <h1 className=" text-5xl font-bold font-serif text-[#445589]">
+          <h1 className=" text-5xl font-bold font-serif text-[#445589] text-center">
             Skills
           </h1>
-          <h1 className="text-2xl font-serif text-center text-[#445589]">
+          <h1 className="text-2xl font-serif text-center text-[#445589] mt-4">
             The skills, tools and technologies I use:
           </h1>
           <div>

@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import FlowbiteInitializer from "@/utils/flowBiteInitializer";
 import Footer from "@/components/footer";
+import Script from "next/script";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -33,6 +34,8 @@ export default function RootLayout({
       >
         {children}
         <Footer/>
+        <Script src="/vendor/snow.js" strategy="lazyOnload" />
+
       </body>
     </html>
   );
