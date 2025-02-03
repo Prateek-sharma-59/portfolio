@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { CiMenuBurger } from "react-icons/ci";
 import { IoMdClose } from "react-icons/io";
-
+import { Link } from "react-scroll";
 
 const Drawer = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -14,8 +14,8 @@ const Drawer = () => {
         className="w-8 h-8 rounded-full border text-white flex items-center justify-center"
         onClick={() => setIsOpen(true)}
       >
-          <CiMenuBurger size={20} />
-          </button>
+        <CiMenuBurger size={20} />
+      </button>
 
       {/* Overlay */}
       {isOpen && (
@@ -32,7 +32,10 @@ const Drawer = () => {
         }`}
       >
         {/* Close Button */}
-        <button className="absolute top-4 right-4 text-gray-600" onClick={() => setIsOpen(false)}>
+        <button
+          className="absolute top-4 right-4 text-gray-600"
+          onClick={() => setIsOpen(false)}
+        >
           <IoMdClose size={24} />
         </button>
 
@@ -40,22 +43,32 @@ const Drawer = () => {
         {/* <h2 className="text-xl font-semibold">Drawer Content</h2>
         <p className="text-gray-600 mt-2">This is a right-side drawer using Tailwind CSS.</p> */}
         <div className="mt-8">
-        <ol className="text-center font-bold">
-          <li >
-            About
-          </li>
-          <li className="mt-4">
-            Skills
-          </li>
-          <li className="mt-4">
-            Projects
-          </li>
-          <li className="mt-4">
-            Contact
-          </li>
-        </ol>
+          <ol className="text-center font-bold">
+            <li>
+              <Link
+                to="About"
+                smooth={true}
+                duration={500}
+                onClick={() => setIsOpen(false)}
+              >
+                About
+              </Link>
+            </li>
+            <li className="mt-4">
+              <Link
+                to="Skills-mobile"
+                smooth={true}
+                duration={500}
+                onClick={() => setIsOpen(false)}
+              >
+                Skills
+              </Link>
+            </li>
+
+            <li className="mt-4">Projects</li>
+            <li className="mt-4">Contact</li>
+          </ol>
         </div>
-        
       </div>
     </div>
   );

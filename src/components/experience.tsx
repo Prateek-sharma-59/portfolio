@@ -45,7 +45,7 @@ const Experience = () => {
   ];
   return (
     <>
-     <div id="Skills1" className="hidden xl:flex md:min-h-screen bg-[#1a1f35]  justify-center items-center md:p-0 p-8">
+     <div id="Skills" className="hidden xl:flex md:min-h-screen bg-[#1a1f35]  justify-center items-center md:p-0 p-8">
       <div className=" bg-white rounded-lg px-4 py-4 md:px-8 md:py-16 lg:w-3/4">
         <h1 className=" text-5xl font-bold font-serif text-[#445589] text-center">
           Skills
@@ -82,7 +82,7 @@ const Experience = () => {
       </div>
     </div>
 
-    <div id="Skills2" className="bg-[#1a1f35] min-h-screen flex xl:hidden justify-center items-center md:p-0 p-8">
+    <div id="Skills-mobile" className="bg-[#1a1f35] min-h-screen flex xl:hidden justify-center items-center md:p-0 p-8">
       <div className="bg-white rounded-lg px-4 py-4 md:px-16 md:py-8 w-full md:w-3/4">
         <h1 className="text-4xl md:text-5xl font-bold font-serif text-[#445589] text-center">
           Skills
