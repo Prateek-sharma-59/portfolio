@@ -1,79 +1,77 @@
-"use client"
-import { usePathname, useRouter } from "next/navigation";
-import React, { useState, useEffect } from "react";
+import { useState } from "react";
+import { CiMenuBurger } from "react-icons/ci";
+import { IoMdClose } from "react-icons/io";
+import { Link } from "react-scroll";
 
-
-const Navigation = ({ setOpen }: any) => {
-  const [isVisible, setIsVisible] = useState(false);
-  
+const Drawer = () => {
+  const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="fixed top-0 left-0 w-full h-full bg-gray-900 bg-opacity-80 z-50">
+    <div>
+      {/* Button to Open Drawer */}
+      <button
+        // className="px-4 py-2 bg-blue-600 text-white rounded-lg"
+        className="w-8 h-8 rounded-full border text-white flex items-center justify-center"
+        onClick={() => setIsOpen(true)}
+      >
+        <CiMenuBurger size={20} />
+      </button>
+
+      {/* Overlay */}
+      {isOpen && (
+        <div
+          className="fixed inset-0 bg-black bg-opacity-50 z-40"
+          onClick={() => setIsOpen(false)}
+        ></div>
+      )}
+
+      {/* Drawer */}
       <div
-        className={`bg-white w-64 h-full p-4 fixed top-0 right-0 transition-transform transform ${
-          isVisible ? "translate-x-0" : "translate-x-full"
-        } duration-300 ease-in-out shadow-lg`}
+        className={`fixed top-0 right-0 h-full w-52 bg-white shadow-lg transform transition-transform z-50 p-4 ${
+          isOpen ? "translate-x-0" : "translate-x-full"
+        }`}
       >
         {/* Close Button */}
         <button
-          className="absolute top-4 right-4 text-black text-2xl"
-          onClick={() => {
-            setIsVisible(false);
-            setTimeout(() => setOpen(false), 300); // Delay closing to allow the slide-out animation
-          }}
+          className="absolute top-4 right-4 text-gray-600"
+          onClick={() => setIsOpen(false)}
         >
-          &times;
+          <IoMdClose size={24} />
         </button>
 
-        {/* Navigation Links */}
-        <ul className="flex flex-col items-start space-y-6 mt-10">
-          <li
-            // className="text-lg font-semibold text-blue-800 hover:underline cursor-pointer"
-            // onClick={() => {
-            //   setIsVisible(false);
-            //   setTimeout(() => setOpen(false), 300);
-            //   navigateToAboutUs();
-            // }}
-          >
-            {/* <a href="/about-us">About us</a> */}
-           
-          </li>
-          <li
-            // className="text-lg font-semibold text-blue-800 hover:underline cursor-pointer"
-            // onClick={() => {
-            //   setIsVisible(false);
-            //   setTimeout(() => setOpen(false), 300);
-            // }}
-          >
-            {/* <a href="/services">Services</a> */}
-            {/* <Link
-                // onClick={navigateToAboutUs}
-                className="text-lg font-semibold text-blue-800 hover:underline cursor-pointer"
-                onClick={() => {
-                  setIsVisible(false);
-                  setTimeout(() => setOpen(false), 300);
-                  navigateToServices();
-                }}
-                to="OurServices"
+        {/* Drawer Content */}
+        {/* <h2 className="text-xl font-semibold">Drawer Content</h2>
+        <p className="text-gray-600 mt-2">This is a right-side drawer using Tailwind CSS.</p> */}
+        <div className="mt-8">
+          <ol className="text-center font-bold">
+            <li>
+              <Link
+                to="About"
                 smooth={true}
                 duration={500}
+                onClick={() => setIsOpen(false)}
               >
-                Services
-              </Link> */}
-          </li>
-          <li>
-            {/* Knowledge Centre with Dropdown */}
-            
-           
-          </li>
-         
-          
+                About
+              </Link>
+            </li>
+            <li className="mt-4">
+              <Link
+                to="Skills-mobile"
+                smooth={true}
+                duration={500}
+                onClick={() => setIsOpen(false)}
+              >
+                Skills
+              </Link>
+            </li>
 
-        
-        </ul>
+            <li className="mt-4">Projects</li>
+            <li className="mt-4">Contact</li>
+          </ol>
+        </div>
       </div>
     </div>
   );
 };
 
-export default Navigation;
+export default Drawer;
