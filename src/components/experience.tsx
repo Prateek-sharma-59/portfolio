@@ -23,9 +23,30 @@ import { GrMysql } from "react-icons/gr";
 import { SiMui } from "react-icons/si";
 
 const Experience = () => {
+  const skills = [
+    { icon: <FaReact />, color: "text-blue-400" },
+    { icon: <IoLogoJavascript />, color: "text-yellow-300" },
+    { icon: <FaHtml5 />, color: "text-orange-400" },
+    { icon: <SiCss3 />, color: "text-blue-500" },
+    { icon: <RiNextjsFill />, color: "text-black dark:text-white" },
+    { icon: <SiTypescript />, color: "text-blue-500" },
+    { icon: <FaNode />, color: "text-green-700" },
+    { icon: <SiMongodb />, color: "text-lime-600" },
+    { icon: <GrMysql />, color: "text-blue-500" },
+    { icon: <FaAws />, color: "text-orange-400" },
+    { icon: <FaGitAlt />, color: "text-orange-500" },
+    { icon: <FaGithubSquare />, color: "text-black dark:text-white" },
+    { icon: <RiTailwindCssFill />, color: "text-blue-500" },
+    { icon: <FaBootstrap />, color: "text-purple-600" },
+    { icon: <SiMui />, color: "text-blue-500" },
+    { icon: <IoLogoFirebase />, color: "text-orange-400" },
+    { icon: <SiNestjs />, color: "text-red-700" },
+    { icon: <SiStrapi />, color: "text-purple-600" },
+  ];
   return (
-    <div id="Skills" className="md:min-h-screen bg-[#1a1f35] flex justify-center items-center md:p-0 p-8">
-      <div className=" bg-white rounded-lg px-4 py-4 md:px-8 md:py-16 md:w-3/4">
+    <>
+     <div id="Skills1" className="hidden xl:flex md:min-h-screen bg-[#1a1f35]  justify-center items-center md:p-0 p-8">
+      <div className=" bg-white rounded-lg px-4 py-4 md:px-8 md:py-16 lg:w-3/4">
         <h1 className=" text-5xl font-bold font-serif text-[#445589] text-center">
           Skills
         </h1>
@@ -60,6 +81,27 @@ const Experience = () => {
         </div>
       </div>
     </div>
+
+    <div id="Skills2" className="bg-[#1a1f35] min-h-screen flex xl:hidden justify-center items-center md:p-0 p-8">
+      <div className="bg-white rounded-lg px-4 py-4 md:px-16 md:py-8 w-full md:w-3/4">
+        <h1 className="text-4xl md:text-5xl font-bold font-serif text-[#445589] text-center">
+          Skills
+        </h1>
+        <h2 className="text-xl md:text-2xl font-serif text-center text-[#445589] mt-4">
+          The skills, tools, and technologies I use:
+        </h2>
+
+        <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 gap-6 md:gap-8 mt-10 justify-center">
+          {skills.map((skill, index) => (
+            <div key={index} className="flex justify-center items-center">
+              <div className={`text-5xl md:text-6xl ${skill.color}`}>{skill.icon}</div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+    </>
+   
   );
 };
 
