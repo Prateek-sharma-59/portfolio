@@ -1,18 +1,17 @@
 "use client";
-import React, { useState } from "react";
-import { CiMenuBurger } from "react-icons/ci";
+import React from "react";
 import Lottie from "react-lottie";
-import Navigation from "./navigation";
 import Drawer from "./navigation";
 import { Link } from "react-scroll";
+import devAnimationData from "../../public/animation/devAnimation.json";
+
 
 const LandingComponent = () => {
-  const [open, setOpen] = useState(false);
 
   const devAnimation = {
     loop: true,
     autoplay: true,
-    animationData: require("../../public/animation/devAnimation.json"),
+    animationData: devAnimationData,
     rendererSettings: {
       preserveAspectRatio: "xMidYMid slice",
     },
@@ -43,7 +42,7 @@ const LandingComponent = () => {
         <div className="text-white flex justify-center items-center">
           <div>
             <h1 className="text-4xl md:text-7xl font-bold font-serif overflow-hidden whitespace-nowrap border-r-4 border-white animate-typing after:content-['|'] after:animate-blink">
-              Hi, I'm Prateek
+            Hi, I&apos;m Prateek
             </h1>{" "}
             <p className="text-base md:text-xl mt-4 font-serif text-balance">
               A passionate software developer with 5 years of experience in MERN

@@ -9,7 +9,6 @@ import { FaNode } from "react-icons/fa";
 import { SiMongodb } from "react-icons/si";
 
 import { SiTypescript } from "react-icons/si";
-import { SiMysql } from "react-icons/si";
 import { FaAws } from "react-icons/fa6";
 import { FaGitAlt } from "react-icons/fa";
 import { FaGithubSquare } from "react-icons/fa";
